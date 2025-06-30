@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Degree Details - Maridany's Portfolio</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/nav.css">
+    <link rel="stylesheet" href="../Styles/general.css">
+    <link rel="stylesheet" href="../Styles/others.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .grades-table th,
+        .grades-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .grades-table th {
+            background-color: var(--accent-color-purple);
+            color: white;
+            font-weight: 600;
+        }
+
+        .grades-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .grades-table tr:hover {
+            background-color: rgba(156, 136, 255, 0.1);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: var(--accent-color-red);
+        }
+
+        .grade {
+            font-weight: 600;
+            color: var(--accent-color-blue);
+        }
+
+        .semester-header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+
+        .final-grade-section {
+            margin-top: 40px;
+            border-top: 2px solid var(--accent-color-purple);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .final-grade-info {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .final-grade-info .grade {
+            color: var(--accent-color-blue);
+            font-weight: 600;
+        }
+
+        .final-grade-info .ects {
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+
+        .final-grade-header {
+            color: var(--accent-color-purple);
+            font-weight: 600;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .final-grade-row {
+            background-color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .final-grade-row td {
+            padding: 20px 15px;
+        }
+
+        .final-grade-row .grade {
+            color: var(--accent-color-blue);
+            font-size: 1.2em;
+        }
+
+        .project-card {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            margin: 0;
+            color: var(--accent-color-purple);
+        }
+
+        .project-date {
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .project-media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .project-media img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-link {
+            padding: 8px 15px;
+            background-color: var(--accent-color-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: var(--accent-color-red);
+        }
+
+        .section-divider {
+            margin: 50px 0;
+            border-top: 2px solid var(--accent-color-purple);
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">MARIDANY</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <a href="../index.html#academic" class="back-button">← Back to Academic Section</a>
+            <h2>Bachelor in Design and Multimedia</h2>
+            <p class="place">Coimbra University</p>
+            <p class="year">2018 - 2021</p>
+
+            <div class="grades-section">
+                <h3>Academic Performance</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Credits</th>
+                            <th>Grade</th>
+                            <th>Semester</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="semester-header">
+                            <td colspan="4">Year 1</td>
+                        </tr>
+                        <tr>
+                            <td>Programming and Problem Solving</td>
+                            <td>12</td>
+                            <td class="grade">20</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Drawing and Representation</td>
+                            <td>6</td>
+                            <td class="grade">14</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Fundamental Mathematics</td>
+                            <td>6</td>
+                            <td class="grade">13</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Typography </td>
+                            <td>6</td>
+                            <td class="grade">14</td>
+                            <td>1</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Multimedia Programming</td>
+                            <td>12</td>
+                            <td class="grade">19</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>History of Design</td>
+                            <td>6</td>
+                            <td class="grade">17</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Drawing and Composition</td>
+                            <td>6</td>
+                            <td class="grade">15</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Theory of Design and Communication</td>
+                            <td>6</td>
+                            <td class="grade">15</td>
+                            <td>2</td>
+                        </tr>
+
+
+                        <tr class="semester-header">
+                            <td colspan="4">Year 2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Project 1 - Web Identity</td>
+                            <td>12</td>
+                            <td class="grade">19</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Technology</td>
+                            <td>6</td>
+                            <td class="grade">14</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Modern Art and Culture</td>
+                            <td>6</td>
+                            <td class="grade">13</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Typography in Digital Media</td>
+                            <td>6</td>
+                            <td class="grade">17</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>Project 2 - Audiovisual</td>
+                            <td>12</td>
+                            <td class="grade">19</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Audiovisual Production</td>
+                            <td>6</td>
+                            <td class="grade">16</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Graphics</td>
+                            <td>6</td>
+                            <td class="grade">15</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Photography and Composition</td>
+                            <td>6</td>
+                            <td class="grade">16</td>
+                            <td>2</td>
+                        </tr>
+
+
+
+                        <tr class="semester-header">
+                            <td colspan="4">Year 3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Project 3 - Multimedia Applications</td>
+                            <td>12</td>
+                            <td class="grade">17</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Systems</td>
+                            <td>6</td>
+                            <td class="grade">17</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineering</td>
+                            <td>6</td>
+                            <td class="grade">13</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Contemporary Art and Culture</td>
+                            <td>6</td>
+                            <td class="grade">14</td>
+                            <td>1</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Project 4 - Interactive Media</td>
+                            <td>12</td>
+                            <td class="grade">18</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Interactive Media Design</td>
+                            <td>6</td>
+                            <td class="grade">14</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Artificial Intelligence</td>
+                            <td>6</td>
+                            <td class="grade">11</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Multimedia Communication</td>
+                            <td>6</td>
+                            <td class="grade">16</td>
+                            <td>2</td>
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+                <div class="final-grade-section">
+                    <div class="final-grade-info">
+                        <p>Final Grade: <span class="grade">16.2 / 20</span></p>
+                        <p class="ects">(Total ECTS: 180)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="projects-section">
+                <h3>Academic Projects</h3>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Maridany. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

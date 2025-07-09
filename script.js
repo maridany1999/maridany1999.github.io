@@ -15,6 +15,61 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Section Navigation Smooth Scrolling
+document.addEventListener('DOMContentLoaded', function () {
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    navButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Remove active class from all buttons
+                navButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Smooth scroll to target
+                const offsetTop = targetElement.offsetTop - 120; // Account for sticky nav
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Update active button based on scroll position
+    window.addEventListener('scroll', function () {
+        const sections = ['rhodes', 'alexander', 'underwater', 'spacestation', 'lab'];
+        const scrollPosition = window.scrollY + 150; // Offset for better detection
+
+        let activeSection = '';
+
+        sections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    activeSection = sectionId;
+                }
+            }
+        });
+
+        // Update active button
+        navButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-target') === activeSection) {
+                btn.classList.add('active');
+            }
+        });
+    });
+});
+
 // Header scroll effect
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
@@ -144,30 +199,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         });
-
-        // Handle page focus events (when user returns to tab)
-        window.addEventListener('focus', function () {
-            videos.forEach(v => {
-                if (v.paused) {
-                    v.currentTime = 0;
-                    v.play().catch(function (error) {
-                        console.log('Video play failed on focus:', error);
-                    });
-                }
-            });
-        });
-
-        // Handle beforeunload to pause videos
-        window.addEventListener('beforeunload', function () {
-            videos.forEach(v => {
-                v.pause();
-            });
-        });
-
-        // Additional reset on page load
-        video.currentTime = 0;
-        video.play().catch(function (error) {
-            console.log('Initial video play failed:', error);
-        });
     });
+});
+
+// Scroll to Top Button Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    if (scrollToTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

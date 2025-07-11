@@ -718,8 +718,7 @@
 
 /* Section Navigation Styles */
 .section-nav {
-    position: sticky;
-    top: 0;
+    position: static;
     background: transparent;
     z-index: 100;
     padding: 15px 0;

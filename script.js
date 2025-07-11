@@ -3,14 +3,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        const targetId = this.getAttribute('href').substring(1); // Remove the # from the href
+        console.log('Target ID:', targetId);
+        const targetElement = document.getElementById(targetId);
+        console.log('Target Element:', targetElement);
 
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80,
+                top: targetElement.offsetTop - 120,
                 behavior: 'smooth'
             });
+        } else {
+            console.log('Element not found for ID:', targetId);
         }
     });
 });

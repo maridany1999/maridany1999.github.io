@@ -823,6 +823,9 @@
     border: 1px solid rgba(156, 136, 255, 0.1);
 }
 
+
+
+
 .youtube-playlist {
     position: relative;
     width: 100%;
@@ -857,7 +860,9 @@
 }
 
 .view-playlist-btn {
-    display: inline-block;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
     background: linear-gradient(135deg, var(--accent-color-purple), #8b7fd1);
     color: white;
     padding: 12px 24px;

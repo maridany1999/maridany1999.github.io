@@ -139,8 +139,9 @@ images.forEach(img => {
 });
 
 function openModal(imgElement) {
-    // Set image source before showing modal
-    modalImg.src = imgElement.src;
+    // Use full-res image if available, otherwise use thumbnail
+    const fullResSrc = imgElement.getAttribute('data-full');
+    modalImg.src = fullResSrc || imgElement.src;
 
     // Show modal
     modal.style.display = 'block';

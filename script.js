@@ -230,3 +230,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// Audio Player Management
+document.addEventListener('DOMContentLoaded', function () {
+    const audioPlayers = document.querySelectorAll('.audio-player');
+
+    // Auto-pause other tracks when one starts playing
+    audioPlayers.forEach(player => {
+        player.addEventListener('play', function () {
+            // Pause all other audio players
+            audioPlayers.forEach(otherPlayer => {
+                if (otherPlayer !== player) {
+                    otherPlayer.pause();
+                }
+            });
+        });
+
+        // Add visual feedback when playing
+        player.addEventListener('play', function () {
+            this.closest('.audio-item').classList.add('playing');
+        });
+
+        player.addEventListener('pause', function () {
+            this.closest('.audio-item').classList.remove('playing');
+        });
+
+        player.addEventListener('ended', function () {
+            this.closest('.audio-item').classList.remove('playing');
+        });
+    });
+});

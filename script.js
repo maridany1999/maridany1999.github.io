@@ -143,6 +143,11 @@ function openModal(imgElement) {
     const fullResSrc = imgElement.getAttribute('data-full');
     modalImg.src = fullResSrc || imgElement.src;
 
+    // if full-res does not exist, do not open modal
+    if (!fullResSrc) {
+        return;
+    }
+
     // Show modal
     modal.style.display = 'block';
 

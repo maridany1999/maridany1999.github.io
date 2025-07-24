@@ -109,6 +109,61 @@
         .social-links a:hover {
             color: #ff4757;
         }
+
+        /* Experimental 3D Art Gallery Button */
+        .experimental-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 40px auto 20px auto;
+        }
+
+        .experimental-label {
+            background: none;
+            color: #fff;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            user-select: none;
+            border: none;
+            border-radius: 0;
+            display: inline-block;
+            margin-right: 18px;
+            padding: 0;
+        }
+
+        .experimental-btn {
+            display: inline-block;
+            padding: 16px 36px;
+            font-size: 1.15rem;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #a78bfa;
+            border-radius: 32px;
+            box-shadow: none;
+            text-shadow: none;
+            letter-spacing: 1.2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.15s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .experimental-btn:hover,
+        .experimental-btn:focus {
+            background: #a78bfa;
+            border-color: #7c3aed;
+            color: #fff;
+            transform: scale(1.04);
+        }
+
+        .experimental-btn:active {
+            transform: scale(0.98);
+        }
     </style>
 </head>
 
@@ -124,6 +179,13 @@
             <p>More than 100 personal projects,</p>
             <p>including Games, 3D Characters, 3D Worlds,</p>
             <p>Coding, and much more...!</p>
+        </div>
+        <!-- Experimental 3D Art Gallery Row -->
+        <div class="experimental-row">
+            <span class="experimental-label">Experimental:</span>
+            <a href="Personal/3d-art.html" class="experimental-btn">
+                3D Art Gallery
+            </a>
         </div>
         <div class="social-links">
             <p class="socials-title">Socials</p>

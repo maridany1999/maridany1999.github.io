@@ -257,12 +257,19 @@ closeBtn.onclick = function (e) {
     closeModal();
 };
 
-// Click outside image to close
-modal.onclick = function (event) {
-    if (event.target === modal) {
+// Close modal when clicking on the modal background
+modal.onclick = function (e) {
+    if (e.target === modal) {
         closeModal();
     }
 };
+
+// Close modal when clicking on the image
+modalImg.onclick = function (e) {
+    e.stopPropagation();
+    closeModal();
+};
+
 
 // Close with escape key
 document.addEventListener('keydown', function (event) {

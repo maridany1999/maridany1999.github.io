@@ -86,12 +86,25 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
+
+
+
+
 // Simple image lightbox
 document.querySelectorAll('.work-item img').forEach(image => {
     image.addEventListener('click', function () {
         console.log('Image clicked:', this.alt);
     });
 });
+
+document.querySelectorAll('.work-item-square img').forEach(image => {
+    image.addEventListener('click', function () {
+        console.log('Image clicked:', this.alt);
+    });
+});
+
+
 
 // Add subtle parallax effect to background elements
 window.addEventListener('mousemove', function (e) {
@@ -102,6 +115,8 @@ window.addEventListener('mousemove', function (e) {
         element.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
 });
+
+
 
 // Add glow effect to work items on hover
 document.querySelectorAll('.work-item').forEach(item => {
@@ -120,6 +135,28 @@ document.querySelectorAll('.work-item').forEach(item => {
     });
 });
 
+document.querySelectorAll('.work-item-square').forEach(item => {
+    item.addEventListener('mouseenter', function () {
+        const color = Math.random() > 0.66 ?
+            'rgba(156, 136, 255, 0.2)' : // Purple
+            (Math.random() > 0.5 ?
+                'rgba(112, 161, 255, 0.2)' : // Blue
+                'rgba(255, 71, 87, 0.2)'); // Red
+
+        this.style.boxShadow = `0 15px 40px ${color}`;
+    });
+
+    item.addEventListener('mouseleave', function () {
+        this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+    });
+});
+
+
+
+
+
+
+
 // Get the modal
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImage');
@@ -137,6 +174,47 @@ images.forEach(img => {
         }
     }
 });
+
+
+
+// Get all images in work items (excluding video overlay items)
+const images_square = document.querySelectorAll('.work-item-square img');
+
+// Add click event to all images
+images_square.forEach(img => {
+    // Skip if parent has video-overlay
+    if (!img.parentElement.querySelector('.video-overlay')) {
+        img.onclick = function () {
+            openModal(this);
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function openModal(imgElement) {
     // Use full-res image if available, otherwise use thumbnail
@@ -160,6 +238,7 @@ function openModal(imgElement) {
     // Prevent scrolling
     document.body.style.overflow = 'hidden';
 }
+
 
 function closeModal() {
     // Start transition

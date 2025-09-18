@@ -787,9 +787,9 @@
 
 .nav-group {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .nav-buttons {
@@ -808,6 +808,8 @@
     margin-right: 10px;
     min-width: 120px;
     display: inline-block;
+    flex-shrink: 0;
+    padding-top: 5px;
 }
 
 .nav-btn {
@@ -897,6 +899,10 @@
         margin: 0;
     }
 }
+
+
+
+
 
 /* YouTube Playlist Styles */
 .youtube-playlist-container {

@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maridany's Portfolio - Under Construction</title>
     <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #9c88ff;
+            --primary-hover: #a78bfa;
+            --primary-dark: #7c3aed;
+            --accent-color: #ff4757;
+            --text-primary: #f1f1f1;
+            --text-secondary: #aaaaaa;
+            --bg-overlay: rgba(0, 0, 0, 0.7);
+            --shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            --shadow-light: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            --font-primary: 'Arial', sans-serif;
+            --font-secondary: 'Montserrat', 'Arial', sans-serif;
+        }
+
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -13,26 +33,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #0a0a0a;
-            color: #f1f1f1;
-            font-family: 'Arial', sans-serif;
+            background: #0a0a0a url('Media/Wallpapers/Wallpaper_1.jpg') center/cover fixed no-repeat;
+            color: var(--text-primary);
+            font-family: var(--font-primary);
             text-align: center;
-            background-image: url('Media/Wallpapers/Wallpaper_1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
             position: relative;
         }
 
         body::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            inset: 0;
+            background: var(--bg-overlay);
             z-index: 1;
         }
 
@@ -42,40 +54,33 @@
             z-index: 2;
         }
 
-        .profile {
-            margin-bottom: 30px;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #9c88ff;
-            margin-bottom: 15px;
-            object-fit: cover;
+        /* Typography */
+        .name, h1 {
+            text-shadow: var(--shadow);
         }
 
         .name {
             font-size: 2rem;
-            color: #f1f1f1;
+            color: var(--text-primary);
             margin: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #9c88ff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: var(--primary-color);
+        }
+
+        p, .experimental-text {
+            color: var(--text-secondary);
+            text-shadow: var(--shadow-light);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         p {
             font-size: 1.2rem;
-            color: #aaaaaa;
-            max-width: 600px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            line-height: 1.6;
         }
 
         p:first-of-type {
@@ -86,8 +91,23 @@
             margin: 5px auto;
         }
 
+        /* Profile section */
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* Social links */
         .socials-title {
-            color: #9c88ff;
+            color: var(--primary-color);
             font-size: 1.3rem;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -99,7 +119,7 @@
         }
 
         .social-links a {
-            color: #9c88ff;
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s ease;
@@ -107,62 +127,118 @@
         }
 
         .social-links a:hover {
-            color: #ff4757;
+            color: var(--accent-color);
         }
 
-        /* Experimental 3D Art Gallery Button */
+        /* Experimental section */
+        .experimental-text {
+            font-size: 1.1rem;
+            margin: 20px auto 30px auto;
+        }
+
         .experimental-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 40px auto 20px auto;
+            max-width: 500px;
+        }
+
+        .experimental-row .experimental-btn:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: calc(50% - 8px);
+        }
+
+
+        .experimental-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
-            margin: 40px auto 20px auto;
-        }
-
-        .experimental-label {
-            background: none;
-            color: #fff;
-            font-family: 'Montserrat', 'Arial', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            user-select: none;
-            border: none;
-            border-radius: 0;
-            display: inline-block;
-            margin-right: 18px;
-            padding: 0;
-        }
-
-        .experimental-btn {
-            display: inline-block;
-            padding: 16px 36px;
+            padding: 16px 24px;
             font-size: 1.15rem;
-            font-family: 'Montserrat', 'Arial', sans-serif;
+            font-family: var(--font-secondary);
             color: #fff;
             background: transparent;
-            border: 2px solid #a78bfa;
+            border: 2px solid var(--primary-hover);
             border-radius: 32px;
             box-shadow: none;
             text-shadow: none;
             letter-spacing: 1.2px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.15s;
+            transition: all 0.18s ease, transform 0.15s ease;
             position: relative;
             z-index: 2;
+            text-decoration: none;
+            min-height: 60px;
         }
 
         .experimental-btn:hover,
         .experimental-btn:focus {
-            background: #a78bfa;
-            border-color: #7c3aed;
+            background: var(--primary-hover);
+            border-color: var(--primary-dark);
             color: #fff;
             transform: scale(1.04);
         }
 
         .experimental-btn:active {
             transform: scale(0.98);
+        }
+
+        .experimental-btn[href=""] {
+            pointer-events: none;
+            opacity: 0.3;
+            cursor: not-allowed;
+            filter: grayscale(0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .profile-pic { width: 120px; height: 120px; }
+            .name { font-size: 1.8rem; }
+            h1 { font-size: 2rem; }
+            p { font-size: 1.1rem; }
+            .experimental-text { font-size: 1rem; margin: 15px auto 25px auto; }
+            .experimental-row { 
+                grid-template-columns: 1fr; 
+                gap: 12px; 
+                margin: 30px auto 15px auto; 
+                max-width: 300px;
+            }
+            .experimental-btn { 
+                padding: 14px 28px; 
+                font-size: 1rem; 
+                min-height: 50px;
+            }
+            .social-links { margin-top: 40px; }
+            .social-links a { 
+                display: block; 
+                margin: 8px 0; 
+                font-size: 1rem; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 10px; }
+            .profile-pic { width: 100px; height: 100px; }
+            .name { font-size: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .experimental-text { font-size: 0.95rem; }
+            .experimental-btn { 
+                padding: 12px 24px; 
+                font-size: 0.95rem; 
+                min-height: 45px;
+            }
+            
+            .experimental-row .experimental-btn:last-child:nth-child(odd) {
+                grid-column: 1;
+                justify-self: stretch;
+                width: auto;
+            }
+
         }
     </style>
 </head>
@@ -174,19 +250,34 @@
             <div class="name">Maridany</div>
         </div>
         <h1>Portfolio Under Construction</h1>
-        <p>Estimated to go Online between July / August 2025!</p>
+        <p>Estimated to go Online between October / December 2025!</p>
 
-        <!-- I'm not sure how many personal projects I have, but as I discover old projects, value keeps increasing -->
-        <div class="project-description">
-            <p>More than 300 personal projects,</p>
-            <p>including Games, 3D Characters, 3D Worlds,</p>
-            <p>Coding, Music, 2D Art, and much more...!</p>
-        </div>
+
+        <p class="experimental-text">However, experimental pages can be seen now, but are incomplete...<br>Click on the buttons below to see them!</p>
+
         <!-- Experimental 3D Art Gallery Row -->
         <div class="experimental-row">
-            <span class="experimental-label">Experimental:</span>
+            <!-- <span class="experimental-label">Experimental:</span> -->
             <a href="Personal/3d-art.html" class="experimental-btn">
-                3D Art Gallery
+                3D Art
+            </a>
+            <a href="Personal/2d-art.html" class="experimental-btn">
+                Drawings
+            </a>
+            <a href="Personal/games.html" class="experimental-btn">
+                Games
+            </a>
+            <a href="" class="experimental-btn">
+                Music
+            </a>
+            <a href="" class="experimental-btn">
+                3D Animation
+            </a>
+            <a href="" class="experimental-btn">
+                Webtoons
+            </a>
+            <a href="" class="experimental-btn">
+                Coding
             </a>
         </div>
         <div class="social-links">

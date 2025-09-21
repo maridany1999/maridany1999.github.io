@@ -846,6 +846,13 @@
     flex-wrap: nowrap;
 }
 
+.nav-subgroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 0 0;
+}
+
 .nav-buttons {
     display: flex;
     align-items: center;
@@ -902,6 +909,14 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+    }
+
+    .nav-subgroup {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0 0 0;
     }
 
     .nav-label {

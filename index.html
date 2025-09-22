@@ -55,7 +55,8 @@
         }
 
         /* Typography */
-        .name, h1 {
+        .name,
+        h1 {
             text-shadow: var(--shadow);
         }
 
@@ -71,7 +72,8 @@
             color: var(--primary-color);
         }
 
-        p, .experimental-text {
+        p,
+        .experimental-text {
             color: var(--text-secondary);
             text-shadow: var(--shadow-light);
             line-height: 1.6;
@@ -195,44 +197,88 @@
 
         /* Responsive Design */
         @media (max-width: 800px) {
-            .container { padding: 15px; }
-            .profile-pic { width: 120px; height: 120px; }
-            .name { font-size: 1.8rem; }
-            h1 { font-size: 2rem; }
-            p { font-size: 1.1rem; }
-            .experimental-text { font-size: 1rem; margin: 15px auto 25px auto; }
-            .experimental-row { 
-                grid-template-columns: 1fr; 
-                gap: 12px; 
-                margin: 30px auto 15px auto; 
+            .container {
+                padding: 15px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .name {
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            .experimental-text {
+                font-size: 1rem;
+                margin: 15px auto 25px auto;
+            }
+
+            .experimental-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin: 30px auto 15px auto;
                 max-width: 300px;
             }
-            .experimental-btn { 
-                padding: 14px 28px; 
-                font-size: 1rem; 
+
+            .experimental-btn {
+                padding: 14px 28px;
+                font-size: 1rem;
                 min-height: 50px;
             }
-            .social-links { margin-top: 40px; }
-            .social-links a { 
-                display: block; 
-                margin: 8px 0; 
-                font-size: 1rem; 
+
+            .social-links {
+                margin-top: 40px;
+            }
+
+            .social-links a {
+                display: block;
+                margin: 8px 0;
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
-            .container { padding: 10px; }
-            .profile-pic { width: 100px; height: 100px; }
-            .name { font-size: 1.5rem; }
-            h1 { font-size: 1.8rem; }
-            p { font-size: 1rem; }
-            .experimental-text { font-size: 0.95rem; }
-            .experimental-btn { 
-                padding: 12px 24px; 
-                font-size: 0.95rem; 
+            .container {
+                padding: 10px;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .experimental-text {
+                font-size: 0.95rem;
+            }
+
+            .experimental-btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
                 min-height: 45px;
             }
-            
+
             .experimental-row .experimental-btn:last-child:nth-child(odd) {
                 grid-column: 1;
                 justify-self: stretch;
@@ -250,10 +296,15 @@
             <div class="name">Maridany</div>
         </div>
         <h1>Portfolio Under Construction</h1>
+
+        <!--  <iframe width="110" height="200" src="https://www.myinstants.com/instant/awaaa-cat-28423/embed/" frameborder="0"
+            scrolling="no"></iframe> -->
+
         <p>Estimated to go Online between October / December 2025!</p>
 
 
-        <p class="experimental-text">However, experimental pages can be seen now, but are incomplete...<br>Click on the buttons below to see them!</p>
+        <p class="experimental-text">However, experimental pages can be seen now, but are incomplete...<br>Click on the
+            buttons below to see them!</p>
 
         <!-- Experimental 3D Art Gallery Row -->
         <div class="experimental-row">
@@ -267,7 +318,7 @@
             <a href="Personal/games.html" class="experimental-btn">
                 Games
             </a>
-            <a href="" class="experimental-btn">
+            <a href="Personal/music.html" class="experimental-btn">
                 Music
             </a>
             <a href="" class="experimental-btn">
@@ -288,7 +339,11 @@
             <a href="" class="experimental-btn">
                 Master's Degree
             </a>
+
         </div>
+
+
+        <!-- Social Links -->
         <div class="social-links">
             <p class="socials-title">Socials</p>
             <a href="https://x.com/maridany1999" target="_blank">Twitter</a>

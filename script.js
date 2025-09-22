@@ -351,3 +351,84 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// AUDIO
+
+function initCustomPlayers() {
+    document.querySelectorAll("audio[data-player]").forEach(audio => {
+        const wrapper = audio.parentElement;
+
+        wrapper.classList.add("audio-wrapper");
+        wrapper.innerHTML = `
+      <audio src="${audio.getAttribute("src")}" preload="metadata"></audio>
+      <div class="controls">
+        <button class="play">▷</button>
+        <div class="timeline">
+          <input class="progress" type="range" min="0" max="100" value="0">
+        </div>
+      </div>
+      <div class="bottom-row">
+        <div class="volume">
+          <span class="icon">🔊</span>
+          <input class="vol" type="range" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    `;
+
+        const player = wrapper.querySelector("audio");
+        const playBtn = wrapper.querySelector(".play");
+        const volIcon = wrapper.querySelector(".icon");
+        const vol = wrapper.querySelector(".vol");
+        const progress = wrapper.querySelector(".progress");
+
+        playBtn.onclick = () => {
+            if (player.paused) {
+                player.play();
+                playBtn.textContent = "⏸️";
+            } else {
+                player.pause();
+                playBtn.textContent = "▷";
+            }
+        };
+
+        progress.oninput = () => player.currentTime = (progress.value / 100) * player.duration;
+
+        vol.oninput = () => {
+            player.volume = vol.value;
+            volIcon.textContent = player.volume == 0 ? "🔇" : player.volume < 0.5 ? "🔉" : "🔊";
+        };
+
+        player.ontimeupdate = () => {
+            progress.value = (player.currentTime / player.duration) * 100 || 0;
+        };
+
+        player.onended = () => {
+            playBtn.textContent = "▷";
+            progress.value = 0;
+        };
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initCustomPlayers);

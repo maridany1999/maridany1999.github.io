@@ -7,7 +7,7 @@
     <title>Music - Maridany's Portfolio</title>
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="../Styles/nav.css">
-    <link rel="stylesheet" href="../Styles/general.css">
+    <link rel="stylesheet" href="../Styles/general_square.css">
     <link rel="stylesheet" href="../Styles/others.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +31,31 @@
 
     <div class="page-header">
         <a href="../index.html#personal" class="back-button"> ⬅ Back</a>
-        <h2>Music Collection</h2>
+        <h2>Audio</h2>
     </div>
+
+    <!-- #region Navigation Menu -->
+    <div class="section-nav">
+        <div class="nav-container">
+            <div class="nav-group">
+                <span class="nav-label">Music</span>
+                <span class="nav-subgroup">
+                    <span class="nav-buttons">
+                        <button class="nav-btn" data-target="sky-levels">Sky Levels</button>
+                        <button class="nav-btn" data-target="hisky">HiSky</button>
+                    </span>
+            </div>
+            <div class="nav-group">
+                <span class="nav-label">effects</span>
+                <!-- <div class="nav-buttons">
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+
+
 
     <section class="work">
         <div class="container">
@@ -46,10 +69,10 @@
 
 
             <div class="work-category main-section-header">
-                <h3>Webtoon OST</h3>
+                <h3>Music</h3>
             </div>
 
-            <div class="work-category" id="rhodes">
+            <div class="work-category" id="sky-levels">
                 <h4>Sky Levels</h4>
                 <p class="category-description">OST for my webtoon (possibly a game in the future) "Sky Levels".</p>
             </div>
@@ -59,104 +82,84 @@
             <div class="work-grid">
 
                 <!-- Track 1 -->
-                <div class="work-item music-item">
+
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Alexander_4.jpg" alt="Track 4">
                     <div class="work-info">
                         <h4>Shadows of Devotion</h4>
                         <p>2025, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Shadows of Devotion.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Shadows of Devotion.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 4 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Rhodes_2.jpg" alt="Track 1">
                     <div class="work-info">
                         <h4>Night Mission</h4>
                         <p>2024, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Night Mission.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Night Mission.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 3 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Alfair_2.jpg" alt="Track 3">
                     <div class="work-info">
                         <h4>Keys of Dust</h4>
                         <p>2024, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Keys of Dust.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Keys of Dust.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 2 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Rhodes_10.jpg" alt="Track 2">
                     <div class="work-info">
                         <h4>Distant Yearning</h4>
                         <p>2025, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Distant Yearning.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Distant Yearning.ogg" data-player></audio>
                     </div>
                 </div>
 
 
                 <!-- Track 5 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Alexander_28.jpg" alt="Track 5">
                     <div class="work-info">
                         <h4>Hunt the Dark</h4>
                         <p>2024, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Hunt the Dark.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Hunt the Dark.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 6 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Worlds/Art_3D_Other_210.jpg" alt="Track 6">
                     <div class="work-info">
                         <h4>A Strange Intro</h4>
                         <p>2024, OST - Sky Levels</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - A Strange Intro.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - A Strange Intro.ogg" data-player></audio>
                     </div>
                 </div>
             </div>
 
-            <div class="work-category main-section-header">
-                <h3>Old / Experimental Compositions</h3>
-            </div>
-
-            <div class="work-category" id="rhodes">
+            <div class="work-category" id="hisky">
                 <h4>HiSky Game</h4>
-                <p class="category-description">Experimental composition for my old game called "HiSky".</p>
+                <p class="category-description">Experimental composition for my old game called "HiSky". Never
+                    published.</p>
             </div>
 
             <!-- Music Grid -->
@@ -164,126 +167,102 @@
 
 
                 <!-- Track 2 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/2D/Digital/Art_2D_HiSky_9.jpg" alt="Track 2">
                     <div class="work-info">
                         <h4>Midnight and Noon</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Midnight and Noon.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Midnight and Noon.ogg" data-player></audio>
                     </div>
                 </div>
 
 
                 <!-- Track 1 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/2D/Digital/Art_2D_HiSky_4.jpg" alt="Track 1">
                     <div class="work-info">
                         <h4>A Blue Rose</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - A Blue Rose.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - A Blue Rose.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 4 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/2D/Digital/Art_2D_HiSky_5.jpg" alt="Track 2">
                     <div class="work-info">
                         <h4>Shadows of the Forest</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Shadows of the Forest.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Shadows of the Forest.ogg" data-player></audio>
                     </div>
                 </div>
 
 
                 <!-- Track 6 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Other_35.jpg" alt="Track 6">
                     <div class="work-info">
                         <h4>Emptiness</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Emptiness.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Emptiness.ogg" data-player></audio>
                     </div>
                 </div>
 
 
                 <!-- Track 3 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Other_33.jpg" alt="Track 3">
                     <div class="work-info">
                         <h4>The Mystery</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - The Mystery.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - The Mystery.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 6 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/3D/Characters/Character_3D_Other_32.jpg" alt="Track 6">
                     <div class="work-info">
                         <h4>Strange Horizon</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Strange Horizon.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Strange Horizon.ogg" data-player></audio>
                     </div>
                 </div>
 
 
                 <!-- Track 5 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/2D/Digital/Art_2D_HiSky_10.jpg" alt="Track 5">
                     <div class="work-info">
                         <h4>Soft Clouds</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Soft Clouds.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Soft Clouds.ogg" data-player></audio>
                     </div>
                 </div>
 
                 <!-- Track 3 -->
-                <div class="work-item music-item">
+                <div class="work-item">
                     <img src="../Media/Art/2D/Digital/Art_2D_HiSky_81.jpg" alt="Track 3">
                     <div class="work-info">
                         <h4>Just a Storytelling</h4>
                         <p>2021, Experimental - HiSky</p>
                     </div>
                     <div class="music-player-container">
-                        <audio controls class="music-player" preload="metadata">
-                            <source src="../Media/Music/Maridany - Just a Storytelling.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.
-                        </audio>
+                        <audio id="audio" src="../Media/Music/Maridany - Just a Storytelling.ogg" data-player></audio>
                     </div>
                 </div>
 
@@ -292,23 +271,15 @@
 
 
 
-
-            <!-- Music Platform Links -->
-            <div class="info-box" data-title="More Music">
-                <p>Also available on YouTube:</p>
-                <div class="music-links">
-                    <a href="https://www.youtube.com/@maridany1999" target="_blank" class="music-link">YouTube</a>
-                </div>
-            </div>
         </div>
     </section>
-    
+
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop" class="scroll-to-top-btn" title="Scroll to top">
         ↑
     </button>
-    
+
 
     <!-- Image Modal -->
     <div id="imageModal" class="modal">

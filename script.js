@@ -1,3 +1,48 @@
+
+// Images Load / Read
+document.querySelectorAll('.work-grid').forEach(grid => {
+    const _folder = grid.dataset.folder;
+    const _file = grid.dataset.file;
+    const _folderFull = `${_folder}/${_file}`;
+
+    grid.querySelectorAll('.work-item-square').forEach(item => {
+        const _name = item.dataset.name;
+        const _year = item.dataset.year;
+        const _index = item.dataset.index;
+        const _fileFull = `${_file}_${_index}`;
+
+        // Create image
+        const _img = document.createElement('img');
+        _img.src = `${_folderFull}/Thumbs/${_fileFull}.jpg`;
+        _img.dataset.full = `${_folderFull}/${_fileFull}.jpg`;
+        _img.alt = `Drawing: ${_name}`;
+
+        // Create work info
+        const _info = document.createElement('div');
+        _info.classList.add('work-info');
+
+        const _h4 = document.createElement('h4');
+        _h4.textContent = _name;
+
+        const _p = document.createElement('p');
+        _p.textContent = _year;
+
+        // #index
+        /* const _span = document.createElement('span');
+        _span.textContent = ` #${_index}`;
+        _span.style.marginLeft = '0.5em';
+        _span.style.opacity = '0.6';
+        _p.appendChild(_span); */
+
+        _info.appendChild(_h4);
+        _info.appendChild(_p);
+
+        item.appendChild(_img);
+        item.appendChild(_info);
+    });
+});
+
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -122,10 +167,10 @@ window.addEventListener('mousemove', function (e) {
 document.querySelectorAll('.work-item').forEach(item => {
     item.addEventListener('mouseenter', function () {
         const color = Math.random() > 0.66 ?
-            'rgba(156, 136, 255, 0.2)' : // Purple
+            'rgba(156, 136, 255, 0.2)' :
             (Math.random() > 0.5 ?
-                'rgba(112, 161, 255, 0.2)' : // Blue
-                'rgba(255, 71, 87, 0.2)'); // Red
+                'rgba(112, 161, 255, 0.2)' :
+                'rgba(255, 71, 87, 0.2)');
 
         this.style.boxShadow = `0 15px 40px ${color}`;
     });
@@ -138,10 +183,10 @@ document.querySelectorAll('.work-item').forEach(item => {
 document.querySelectorAll('.work-item-square').forEach(item => {
     item.addEventListener('mouseenter', function () {
         const color = Math.random() > 0.66 ?
-            'rgba(156, 136, 255, 0.2)' : // Purple
+            'rgba(156, 136, 255, 0.2)' :
             (Math.random() > 0.5 ?
-                'rgba(112, 161, 255, 0.2)' : // Blue
-                'rgba(255, 71, 87, 0.2)'); // Red
+                'rgba(112, 161, 255, 0.2)' :
+                'rgba(255, 71, 87, 0.2)');
 
         this.style.boxShadow = `0 15px 40px ${color}`;
     });
@@ -248,7 +293,7 @@ function closeModal() {
     setTimeout(() => {
         modal.style.display = 'none';
         document.body.style.overflow = '';
-    }, 200); // Match the transition duration from CSS
+    }, 200); // This here matches the transition duration from CSS
 }
 
 // Close button functionality

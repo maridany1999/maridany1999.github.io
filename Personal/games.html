@@ -14,141 +14,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
         rel="stylesheet">
-    <style>
-        .game-card {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .game-media {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .game-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .game-info {
-            padding: 25px;
-        }
-
-        .game-title {
-            font-size: 1.5em;
-            color: var(--accent-color-purple);
-            margin-bottom: 10px;
-        }
-
-        /* .game-meta {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            color: var(--text-color);
-            opacity: 0.8;
-        } */
-
-
-        /* Game Meta Styles */
-        .game-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin: 10px 0 20px 0;
-            font-size: 0.9rem;
-            color: var(--text-color-muted);
-        }
-
-        .game-meta .meta-line-1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .game-meta .meta-line-2 {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.274);
-            flex-wrap: wrap;
-        }
-
-        .game-meta .meta-line-3 {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: var(--text-color-muted);
-            opacity: 0.8;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(206, 199, 240, 0.2);
-            flex-wrap: wrap;
-        }
-
-
-        .game-description {
-            color: var(--text-color);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            margin-top: 10px;
-        }
-
-        .game-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .game-link {
-            padding: 8px 15px;
-            background-color: transparent;
-            color: var(--accent-color-purple);
-            text-decoration: none;
-            border-radius: 5px;
-            border: 2px solid var(--accent-color-purple);
-            transition: all 0.3s ease;
-        }
-
-        .game-link:hover {
-            background-color: var(--accent-color-purple);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .video-link {
-            padding: 8px 15px;
-            background-color: transparent;
-            color: var(--accent-color-purple);
-            text-decoration: none;
-            border-radius: 5px;
-            border: 2px solid var(--accent-color-purple);
-            transition: all 0.3s ease;
-        }
-
-        .video-link:hover {
-            background-color: var(--accent-color-purple);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .coming-soon {
-            text-align: center;
-            padding: 50px 0;
-            color: var(--text-color);
-            opacity: 0.8;
-        }
-    </style>
 </head>
 
 <body>
@@ -207,6 +72,7 @@
     <!-- #endregion -->
 
 
+
     <section class="work">
         <div class="container">
 
@@ -218,26 +84,26 @@
 
 
 
-            <div class="work-grid-games">
+            <div class="work-grid-items">
 
 
                 <!-- Sky Levels -->
 
-                <div class="game-card" id="sky-levels">
-                    <div class="game-media">
+                <div class="item-card" id="sky-levels">
+                    <div class="item-media">
                         <img src="../Media/Games/Main/GameMain_SkyLevels.jpg" alt="Sky Levels">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Sky Levels</h3>
-                        <div class="game-meta">
+                    <div class="item-info">
+                        <h3 class="item-title">Sky Levels</h3>
+                        <div class="item-meta">
                             <span>Platform: Itch.io</span>
                             <span>Release: Coming soon (2026)</span>
                             <span>Genre: 3D Visual Novel, Adventure, Horror</span>
                         </div>
-                        <p class="game-description">
+                        <p class="item-description">
                             First Demo (Episode 1) to be released in 2026!
                         </p>
                     </div>
@@ -247,18 +113,18 @@
 
                 <!-- Furcoop -->
 
-                <div class="game-card" id="sky-levels">
-                    <div class="game-media">
+                <div class="item-card" id="sky-levels">
+                    <div class="item-media">
                         <img src="../Media/Games/Main/GameMain_Furcoop.jpg" alt="Sky Levels">
                     </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Furcoop</h3>
-                        <div class="game-meta">
+                    <div class="item-info">
+                        <h3 class="item-title">Furcoop</h3>
+                        <div class="item-meta">
                             <span>Platform: Steam / Itch.io</span>
                             <span>Release: Coming soon (2026)</span>
                             <span>Genre: Party Games</span>
                         </div>
-                        <p class="game-description">
+                        <p class="item-description">
                             First Demo will contain Board Games only
                         </p>
                     </div>
@@ -268,17 +134,17 @@
 
                 <!-- Lost Anomaly -->
 
-                <div class="game-card" id="lost-anomaly">
-                    <div class="game-media">
+                <div class="item-card" id="lost-anomaly">
+                    <div class="item-media">
                         <img src="../Media/Games/Main/GameMain_LostAnomaly.png" alt="Lost Anomaly">
                         <a href="https://www.youtube.com/watch?v=pi0IkiS5iA8" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a>
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Lost Anomaly</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Lost Anomaly</h3>
+                        <div class="item-meta">
                             <span>Platform: Itch.io</span>
                             <span>Release: TBA</span>
                             <span>Genre: Action, Survival</span>
@@ -295,8 +161,8 @@
                                 still working on it, but it's not my main focus right now.</p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://www.youtube.com/watch?v=pi0IkiS5iA8" class="game-link"
+                        <div class="item-links">
+                            <a href="https://www.youtube.com/watch?v=pi0IkiS5iA8" class="item-link"
                                 target="_blank">TRAILER</a>
                         </div>
 
@@ -306,21 +172,21 @@
 
                 <!-- HiSky -->
 
-                <div class="game-card" id="hisky">
-                    <div class="game-media">
+                <div class="item-card" id="hisky">
+                    <div class="item-media">
                         <img src="../Media/Games/HiSky/HiSky_Cover_1.jpg" alt="HiSky">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
-                        <h3 class="game-title">HiSky</h3>
-                        <div class="game-meta">
+                    <div class="item-info">
+                        <h3 class="item-title">HiSky</h3>
+                        <div class="item-meta">
                             <span>Platform: Itch.io</span>
                             <span>Release: TBA</span>
                             <span>Genre: Survival, Adventure</span>
                         </div>
-                        <p class="game-description">
+                        <p class="item-description">
                             Project Paused.
                         </p>
                     </div>
@@ -329,26 +195,26 @@
 
                 <!-- Others... I made them while learning, but never finished or published them -->
 
-                <div class="game-card" id="personal-games-others">
-                    <div class="game-media">
+                <div class="item-card" id="personal-games-others">
+                    <div class="item-media">
                         <img src="../Media/Games/Others/Others_Cover_1.jpg" alt="Others... Made while learning">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
-                        <h3 class="game-title">Others... I made them while learning, but never finished or published
+                    <div class="item-info">
+                        <h3 class="item-title">Others... I made them while learning, but never finished or published
                             them</h3>
-                        <div class="game-meta">
+                        <div class="item-meta">
                             <span>Platform: None...</span>
                             <span>Release: None...</span>
                             <span>Genre: Multiple...</span>
                         </div>
-                        <p class="game-description">
+                        <p class="item-description">
                             More info coming soon!
                         </p>
-                        <div class="game-links">
-                            <a href="#" class="game-link">Coming Soon</a>
+                        <div class="item-links">
+                            <a href="#" class="item-link">Coming Soon</a>
                         </div>
                     </div>
                 </div>
@@ -360,21 +226,21 @@
                 <h3>Game Jams</h3>
             </div>
 
-            <div class="work-grid-games">
+            <div class="work-grid-items">
 
                 <!-- Terra Spaceship -->
 
-                <div class="game-card" id="terra-spaceship">
-                    <div class="game-media">
+                <div class="item-card" id="terra-spaceship">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_TerraSpaceship_1.jpg" alt="Terra Spaceship">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Terra Spaceship</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Terra Spaceship</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Action, Survival</span>
                                 <span>2019</span>
@@ -402,8 +268,8 @@
                                 showcases my dedication and interest to learn more.</p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/terra-spaceship" class="game-link" target="_blank">PLAY on
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/terra-spaceship" class="item-link" target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -412,17 +278,17 @@
 
                 <!-- Zomb -->
 
-                <div class="game-card" id="zomb">
-                    <div class="game-media">
+                <div class="item-card" id="zomb">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_Zomb_1.jpg" alt="Zomb">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Zomb</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Zomb</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Action, Survival</span>
                                 <span>2019</span>
@@ -447,8 +313,8 @@
                             </p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/zomb" class="game-link" target="_blank">PLAY on
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/zomb" class="item-link" target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -457,17 +323,17 @@
 
                 <!-- Rising Snakes -->
 
-                <div class="game-card" id="rising-snakes">
-                    <div class="game-media">
+                <div class="item-card" id="rising-snakes">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_RisingSnakes_1.jpg" alt="Rising Snakes">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Rising Snakes</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Rising Snakes</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Survival</span>
                                 <span>2022</span>
@@ -491,8 +357,8 @@
                             <p>A 1-week game jam, and my third participation in a game jam. Hehe </p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/rising-snakes" class="game-link" target="_blank">PLAY on
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/rising-snakes" class="item-link" target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -501,17 +367,17 @@
 
                 <!-- Enroo -->
 
-                <div class="game-card" id="enroo">
-                    <div class="game-media">
+                <div class="item-card" id="enroo">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_Enroo_1.jpg" alt="Enroo">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Enroo</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Enroo</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Action</span>
                                 <span>2023</span>
@@ -535,8 +401,8 @@
                             <p>A 2-day game jam, and my fourth participation in a game jam. Hehe </p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/enroo" class="game-link" target="_blank">PLAY on
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/enroo" class="item-link" target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -545,17 +411,17 @@
 
                 <!-- Ja 02 -->
 
-                <div class="game-card" id="ja-02">
-                    <div class="game-media">
+                <div class="item-card" id="ja-02">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_JA-02_1.jpg" alt="Ja 02">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Ja 02</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Ja 02</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Action</span>
                                 <span>2023</span>
@@ -579,8 +445,8 @@
                             <p>A 2-day game jam, and my fourth participation in a game jam. Hehe </p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://coanhas.itch.io/ja-02" class="game-link" target="_blank">PLAY on
+                        <div class="item-links">
+                            <a href="https://coanhas.itch.io/ja-02" class="item-link" target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -589,17 +455,17 @@
 
                 <!-- The Key of New Beans -->
 
-                <div class="game-card" id="ja-02">
-                    <div class="game-media">
+                <div class="item-card" id="ja-02">
+                    <div class="item-media">
                         <img src="../Media/Games/Jams/GameJam_TheKeyOfNewBeans_1.jpg" alt="The Key Of New Beans">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">The Key of New Beans</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">The Key of New Beans</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Survival</span>
                                 <span>2026</span>
@@ -627,8 +493,8 @@
                             <p>This game jam was chill and I actually slept! Omg :O </p>
                         </div>
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/the-key-of-new-beans" class="game-link"
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/the-key-of-new-beans" class="item-link"
                                 target="_blank">PLAY on
                                 Itch.io</a>
                         </div>
@@ -649,21 +515,21 @@
                 <h3>Challenges</h3>
             </div>
 
-            <div class="work-grid-games">
+            <div class="work-grid-items">
 
                 <!-- Lifeless Machine -->
 
-                <div class="game-card" id="lifeless-machine">
-                    <div class="game-media">
+                <div class="item-card" id="lifeless-machine">
+                    <div class="item-media">
                         <img src="../Media/Games/Challenges/GameChallenge_LifelessMachine_1.jpg" alt="Lifeless Machine">
                         <!-- <a href="" class="video-overlay" target="_blank">
                             <div class="play-button"></div>
                         </a> -->
                     </div>
-                    <div class="game-info">
+                    <div class="item-info">
 
-                        <h3 class="game-title">Lifeless Machine</h3>
-                        <div class="game-meta">
+                        <h3 class="item-title">Lifeless Machine</h3>
+                        <div class="item-meta">
                             <div class="meta-line-1">
                                 <span>Action, Survival</span>
                                 <span>2021</span>
@@ -695,8 +561,8 @@
 
 
 
-                        <div class="game-links">
-                            <a href="https://maridany.itch.io/lifeless-machine" class="game-link" target="_blank">PLAY
+                        <div class="item-links">
+                            <a href="https://maridany.itch.io/lifeless-machine" class="item-link" target="_blank">PLAY
                                 on Itch.io</a>
                         </div>
                     </div>
@@ -710,12 +576,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <footer>
-        <div class="container">
-            <p>&copy; 2025 Maridany. All rights reserved.</p>
-        </div>
-    </footer> -->
 
 
     <!-- Scroll to Top Button -->

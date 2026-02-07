@@ -7,7 +7,7 @@
     <title>Master's Degree Details - Maridany's Portfolio</title>
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="../Styles/nav.css">
-    <link rel="stylesheet" href="../Styles/general.css">
+    <link rel="stylesheet" href="../Styles/general_square.css">
     <link rel="stylesheet" href="../Styles/others.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,19 +43,6 @@
 
         .grades-table tr:hover {
             background-color: rgba(156, 136, 255, 0.1);
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: var(--accent-color-purple);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: var(--accent-color-red);
         }
 
         .grade {
@@ -207,16 +194,23 @@
         <div class="logo">MARIDANY</div>
         <nav>
             <ul>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#work">Work</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#about">ℹ️ About</a></li>
+                <li><a href="../index.html#work">🎓 Academic Work</a></li>
+                <li><a href="../index.html#personal">🎨 Personal Projects</a></li>
+                <li><a href="../index.html#contact">📧 Contact</a></li>
             </ul>
         </nav>
     </header>
 
+
+    <div class="page-header">
+        <a href="../index.html#personal" class="back-button"> ⬅ Back</a>
+        <h2>Bachelor's Degree</h2>
+    </div>
+
+
     <section class="about">
         <div class="container">
-            <a href="../index.html#academic" class="back-button">← Back to Academic Section</a>
             <h2>Bachelor in Design and Multimedia</h2>
             <p class="place">Coimbra University</p>
             <p class="year">2018 - 2021</p>
@@ -431,7 +425,7 @@
     <button id="scrollToTop" class="scroll-to-top-btn" title="Scroll to top">
         ↑
     </button>
-    
+
 
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
